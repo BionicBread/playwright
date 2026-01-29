@@ -9,3 +9,5 @@ node_modules/
 # Playwright
 /playwright/.auth/
 /.txt/
+/.env/
+/playwright/.env/

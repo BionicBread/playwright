@@ -26,12 +26,12 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
-    baseURL: 'https://data.hub.api.metoffice.gov.uk/atmospheric-models/1.0.0',
+    baseURL: process.env.API_BASE_URL,
     
     extraHTTPHeaders: {
     // set up header based on met office api docs
     Accept: 'application/json',
-    Authorization: `token ${process.env.API_TOKEN}`,
+    Authorization: `Bearer ${process.env.API_TOKEN}`,
   
     },
     
